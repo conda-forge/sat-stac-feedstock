@@ -1,4 +1,4 @@
-{% set version = "0.2.0" %}
+{% set version = "0.3.0" %}
 
 package:
   name: sat-stac
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/s/sat-stac/sat-stac-{{ version }}.tar.gz
-  sha256: e9414e18da633f0ded0b6765c6bb0c0ca3066782ab2dd927ac27ab59a78ac0ea
+  sha256: 4d249434efa51279a03f1fab3b66400b5438af5390178ebd0e05d22acad86512
 
 build:
   number: 0
