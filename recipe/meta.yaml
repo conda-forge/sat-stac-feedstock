@@ -1,4 +1,4 @@
-{% set version = "0.3.3" %}
+{% set version = "0.4.0" %}
 
 package:
   name: sat-stac
@@ -6,14 +6,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/s/sat-stac/sat-stac-{{ version }}.tar.gz
-  sha256: 5008d129fea7e5fe528009b9b1b045da201664c48f6bdd6cc1e0560d4bcd5b55
+  sha256: 42dafacd328244a3a8543ae4fe59bd775b7e6b63ff044aa46fa515389a2893f6
 
 build:
   number: 0
   noarch: python
   entry_points:
     - sat-stac=satstac.cli:cli
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -28,14 +28,17 @@ test:
   imports:
     - satstac
   commands:
+    - pip check
     - sat-stac --help
+  requires:
+    - pip
 
 about:
   home: https://github.com/sat-utils/sat-stac.git
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: "A Python library for working with Spatio-Temporal Asset Catalogs (STAC)"
+  summary: A Python library for working with Spatio-Temporal Asset Catalogs (STAC)
 
 extra:
   recipe-maintainers:
