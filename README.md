@@ -5,11 +5,9 @@ Home: https://github.com/sat-utils/sat-stac.git
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/sat-stac-feedstock/blob/master/LICENSE.txt)
 
 Summary: A Python library for working with Spatio-Temporal Asset Catalogs (STAC)
-
-
 
 Current build status
 ====================
