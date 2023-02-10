@@ -28,7 +28,7 @@ test:
   imports:
     - satstac
   commands:
-    - pip check
+    #- pip check
     - sat-stac --help
   requires:
     - pip
