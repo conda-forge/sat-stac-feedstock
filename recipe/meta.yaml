@@ -9,7 +9,7 @@ source:
   sha256: a06bb3491ee49497262d228e9c8aed4d68d89e7dff140e2439f199dd92864f2c
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - sat-stac=satstac.cli:cli
@@ -17,11 +17,11 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
   run:
-    - python
-    - python-dateutil >=2.7.5,<2.8
+    - python >=3.6
+    - python-dateutil >=2.7.5
     - requests >=2.19.1
 
 test:
