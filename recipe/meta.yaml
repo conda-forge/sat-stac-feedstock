@@ -5,11 +5,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/s/sat-stac/sat-stac-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/s/sat-stac/sat-stac-{{ version }}.tar.gz
   sha256: a06bb3491ee49497262d228e9c8aed4d68d89e7dff140e2439f199dd92864f2c
 
 build:
-  number: 1
+  number: 2
   noarch: python
   entry_points:
     - sat-stac=satstac.cli:cli
@@ -17,10 +17,10 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - python-dateutil >=2.7.5
     - requests >=2.19.1
 
@@ -32,6 +32,7 @@ test:
     - sat-stac --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/sat-utils/sat-stac.git
