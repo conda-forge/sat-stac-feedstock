@@ -9,11 +9,11 @@ source:
   sha256: a06bb3491ee49497262d228e9c8aed4d68d89e7dff140e2439f199dd92864f2c
 
 build:
-  number: 2
+  number: 3
   noarch: python
   entry_points:
     - sat-stac=satstac.cli:cli
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
 
 requirements:
   host:
@@ -29,7 +29,7 @@ test:
   imports:
     - satstac
   commands:
-    #- pip check
+    - pip check
     - sat-stac --help
   requires:
     - pip
